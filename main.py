@@ -336,5 +336,8 @@ def main():
     return 1
 
 
+# Model-free fallback: when both vendors refuse (no key pushed), every photo
+# still gets an answer from a fixed prior instead of being left blank, since
+# one unanswered photo costs the maximum 20,015 km and drags the whole trial down.
 if __name__ == "__main__":
     sys.exit(main())
